@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone 17 Pro Max 2TB - Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+      thegioididong.com
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Bạn cần tìm gì?">
+      <button>TÌM KIẾM</button>
+    </div>
+
+    <div class="header-right">
+      <span>Đăng nhập</span>
+      <span>🛒 Giỏ hàng</span>
+      <span>📍 TP. Hồ Chí Minh</span>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="sidebar">
+      <h3>☰ Danh mục sản phẩm</h3>
+      <ul>
+        <li>Điện thoại</li>
+        <li>Laptop</li>
+        <li>Đồng hồ</li>
+        <li>Phụ kiện</li>
+      </ul>
+    </div>
+
+    <div class="product-detail">
+      <h1>iPhone 17 Pro Max 2TB | Chính hãng Việt Nam</h1>
+
+      <div class="product-gallery">
+        <img src="images/ip17 1.png" class="active">
+        <img src="images/ip17 2.png">
+        <img src="images/ip17 3.png">
+        <button class="gallery-btn prev" onclick="prevImage()">&#10094;</button>
+        <button class="gallery-btn next" onclick="nextImage()">&#10095;</button>
+      </div>
+
+      <p><b>Giá:</b> <span style="color:red; font-size:22px;">63.990.000đ</span></p>
+      <p><b>Giá lên đời:</b> 62.990.000đ</p>
+      <p><b>Tình trạng:</b> Còn hàng – đủ màu</p>
+      <p><b>Bảo hành:</b> 12 tháng chính hãng</p>
+      <p><b>Phụ kiện kèm theo:</b> Cáp USB-C, sách hướng dẫn, hộp</p>
+
+      <h3>Đặc điểm nổi bật</h3>
+      <ul>
+
+        <li>Màn hình:</li>
+        <li>LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision | 6,9 inch</li>
+        <li>Camera trước:       18 MP</li>
+        <li>Camera sau:         48 MP + 48 MP + 48 MP</li>
+        <li>Chipset:            Apple A19 Pro</li>
+        <li>RAM:                12GB</li>
+        <li>Bộ nhớ trong:       256GB/512GB/1TB/2TB</li>
+        <li>Thẻ Sim:            Nano-SIM + eSIM + eSIM</li>
+        <li>Pin:                Li-Ion 4832 mAh - Model Nano SIM</li>
+        <li>                    Li-Ion 5088 mAh - model chỉ eSIM</li>
+        <li>Hệ điều hành:       iOS 19</li>
+      </ul>
+
+      <a href="index.html" class="btn">← Quay lại trang chính</a>
+      <button class="buy-btn">Thêm vào giỏ hàng</button>
+    </div>
+  </div>
+
+  <script>
+    let current = 0;
+    const images = document.querySelectorAll('.product-gallery img');
+    const total = images.length;
+
+    function showImage(i) {
+      images.forEach(img => img.classList.remove('active'));
+      images[i].classList.add('active');
+    }
+    function nextImage() {
+      current = (current + 1) % total;
+      showImage(current);
+    }
+    function prevImage() {
+      current = (current - 1 + total) % total;
+      showImage(current);
+    }
+    setInterval(nextImage, 3000);
+  </script>
+</body>
+
+</html>
