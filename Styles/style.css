@@ -102,6 +102,7 @@ ul {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out; 
+    border-radius: 10px;
 }
 .action-item:last-child {
     background-color: #ffe04d;
@@ -111,7 +112,9 @@ ul {
     margin-right: 5px; 
 }
 .action-item:hover {
-    background-color: #ffc400; 
+    font-weight: 600;
+    border: 2px solid #94dc19;
+    background-color: #f4e80c; 
 }
 
 
@@ -194,7 +197,7 @@ ul {
 }
 
 .category-list li:hover a {
-    color: #6cba30;
+    color: #000;
     font-weight: bold;
 }
 
@@ -213,7 +216,7 @@ ul {
     margin-top: 20px;
 }
 .main-banner {
-    background-image: url('../Images/iPhone-17.jpg'); 
+    background-image: url(../Images/iPhone-17.jpg); 
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -241,7 +244,8 @@ ul {
     transition: background-color 0.2s ease-in-out;
 }
 .shop-btn:hover {
-    background: #ffc400;
+    border: 2px solid #3ad0de;
+    background: #f6fe05;
 }
 
 
@@ -256,7 +260,7 @@ ul {
 
 .hot-sale-section .container {
     position: relative;
-    border: 3px solid #dff114; 
+    border: 3px solid #ff0055; 
     border-radius: 15px;
     padding: 20px 10px;
     background: linear-gradient(to bottom, #ffe6eb, #ffffff 80%); 
@@ -267,7 +271,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #dff114; 
+    background-color: #ff0055; 
     color: white;
     padding: 10px 20px;
     border-radius: 10px 10px 0 0;
@@ -353,7 +357,9 @@ ul {
     transition: box-shadow 0.2s;
 }
 .product-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Badges (Giảm giá, Trả góp 0%) */
@@ -433,7 +439,7 @@ ul {
 .next-arrow { right: 5px; }
 
 /* ================================================= */
-/* === PHẦN FOOTER === */
+/* === 5. FOOTER (TINH CHỈNH) === */
 /* ================================================= */
 
 footer {
@@ -460,117 +466,52 @@ footer {
     margin-bottom: 15px;
 }
 
-.footer-col ul {
-    padding: 0;
-}
-
-.footer-col li {
-    margin-bottom: 10px;
-}
-
 .footer-col a {
-    color: #666;
-    transition: color 0.2s;
-}
-
-.footer-col a:hover {
-    color: var(--primary-color);
-}
-
-.hotline {
-    color: #000;
-    font-weight: bold;
-}
-
-/* Cột 4: Sites & Social */
-.social-col h3 {
+    color: var(--light-text-color);
+    display: inline-block;
     margin-bottom: 5px;
 }
+.footer-col a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
 
+/* Social & Affiliates */
 .affiliate-sites {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 5px;
 }
-
 .affiliate-sites img {
     height: 30px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
+    transition: opacity 0.2s;
 }
 
 .social-links {
+    margin-top: 15px;
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
 }
-
 .social-item {
-    display: flex;
-    align-items: center;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 13px;
+    color: white;
     font-weight: bold;
+    font-size: 13px;
     cursor: pointer;
+    transition: opacity 0.2s;
+}
+.social-item:hover {
+    opacity: 0.8;
 }
 
-.social-item i {
-    margin-right: 5px;
-    font-size: 16px;
-}
-
-.facebook {
-    background-color: #1877f2;
-    color: white;
-}
-
-.youtube {
-    background-color: #ff0000;
-    color: white;
-}
-
-.certifications img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-/* --- COPYRIGHT BOTTOM --- */
+/* COPYRIGHT BOTTOM */
 .footer-bottom {
     background-color: #e5e5e5;
     padding: 20px 0;
-}
-
-.copyright-text p {
-    font-size: 11px;
-    color: #555;
-    line-height: 1.6;
-}
-
-.copyright-text a {
-    color: #007bff;
-    text-decoration: underline;
-}
-
-/* --- RESPONSIVE CHO FOOTER --- */
-@media screen and (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cột trên Mobile/Tablet */
-    }
-    .footer-col:nth-child(3) {
-        order: 4; /* Đẩy cột Thông tin khác xuống cuối */
-    }
-    .social-col {
-        order: 3; /* Đẩy cột Social lên trên */
-    }
-    .footer-bottom {
-        padding: 15px 0;
-    }
-    .copyright-text p {
-        font-size: 10px;
-        text-align: justify;
-    }
+    border-top: 1px solid #ccc;
 }
 /* ================================================= */
 /* === MEDIA QUERIES (RESPONSIVE) === */
@@ -632,6 +573,7 @@ footer {
     
     /* Ẩn danh sách danh mục trên Mobile (dùng JS để hiện) */
     .category-list {
+        background-color: white;
         display: none; 
     }
     
@@ -645,7 +587,7 @@ footer {
          display: none;
     }
     .category-list li:hover {
-        background-color: transparent;
+        background-color: rgb(221, 216, 48);
     }
     .category-list li:hover a {
         color: var(--text-color);
