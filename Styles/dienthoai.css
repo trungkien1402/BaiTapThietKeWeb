@@ -86,5 +86,6 @@ body {
 }
 
 .btn:hover, .buy-btn:hover {
-  background-color: #2E7D32;
+  background-color: rgb(200, 48, 164);
+  box-shadow: rgb(200, 48, 164) 0px 8px 15px;
 }

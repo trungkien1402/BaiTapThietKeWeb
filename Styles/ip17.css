@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.product-detail {
+    width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-detail h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-gallery {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.product-gallery img {
+    max-width: 100%;
+    max-height: 400px;
+    display: none;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.product-gallery img.active {
+    display: block;
+}
+
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.gallery-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.gallery-btn.prev {
+    left: 10px;
+}
+
+.gallery-btn.next {
+    right: 10px;
+}
+
+.product-detail p {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #555;
+}
+
+.product-detail h3 {
+    margin-top: 25px;
+    font-size: 22px;
+    color: #222;
+}
+
+.product-detail ul {
+    margin: 10px 0 20px 20px;
+    color: #555;
+}
+
+.product-detail ul li {
+    margin-bottom: 8px;
+}
+
+.btn, .buy-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn {
+    background-color: #ddd;
+    color: #333;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+.buy-btn {
+    background-color: #ff3e00;
+    color: white;
+}
+
+.buy-btn:hover {
+    background-color: #e63600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-detail {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .product-gallery img {
+        max-height: 250px;
+    }
+
+    .btn, .buy-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gallery-btn.prev, .gallery-btn.next {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}

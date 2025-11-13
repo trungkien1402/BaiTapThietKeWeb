@@ -15,6 +15,7 @@
 body {
     font-family: Arial, sans-serif;
     color: var(--text-color);
+    
 }
 
 a {
@@ -36,12 +37,13 @@ ul {
 
 /* --- PHẦN HEADER (TOP BAR) --- */
 .header {
-    background-color: rgb(212, 223, 234); 
-    border-bottom:2px solid black;
-    border-radius: 10px;
-    padding: 10px 0;
+    background-color: rgb(200, 48, 164); 
+    border-bottom:2px solid rgb(58, 37, 150);
+    border-bottom-left-radius: 60px;
+    padding-top: 15px; 
     width: 100%;
-    height: 70px;
+    height: 100px;
+    box-shadow: 0px 0px 30px 30px  rgba(175, 16, 122, 0.1);
 }
 
 .header-main {
@@ -52,9 +54,9 @@ ul {
 }
 
 .logo h2 {
-    color: #000;
+    color: #ffffff;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 50px;
     white-space: nowrap;
 }
 
@@ -94,8 +96,10 @@ ul {
 .top-bar-actions {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    color: var(--text-color);
+    gap: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
     white-space: nowrap;
 }
 
@@ -109,7 +113,7 @@ ul {
     border-radius: 10px;
 }
 .action-item:last-child {
-    background-color: #ffe04d;
+    background-color: #54d069;
     border-radius: 5px;
 }
 .action-item i { 
@@ -127,6 +131,8 @@ ul {
     display: flex;
     gap: 30px; 
     margin-bottom: 50px;
+    
+    
 }
 
 /* Cột 1: Danh mục */
@@ -134,10 +140,13 @@ ul {
     width: 25%;
     position: relative;
     margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: visible;
 }
 
 .categories-header {
-    background-color: rgb(212, 223, 234); /* Xanh lá */
+    background-color: rgb(200, 48, 164);
     color: white;
     padding: 15px 20px;
     font-weight: bold;
@@ -156,62 +165,74 @@ ul {
     border-bottom: 1px solid var(--border-color);
     transition: background-color 0.2s ease-in-out;
 }
+
 .category-list li a {
     display: block;
     padding: 10px 20px;
     font-size: 15px;
-    transition: color 0.2s ease-in-out; 
+    transition: color 0.2s ease-in-out;
 }
+
 .category-list li:last-child {
     border-bottom: none;
 }
 
 /* --- SUBMENU (MENU CON) --- */
-.has-submenu a i {
-    font-size: 12px;
+.has-submenu {
+    position: relative;
 }
+
 .submenu-list {
     display: none; 
     position: absolute;
-    top: 0; 
-    left: 100%; 
-    width: 200px;
+    top: 0;
+    left: 100%; /* xuất bên phải menu cha */
+    min-width: 180px;
     background-color: white;
     border: 1px solid var(--border-color);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 20;
 }
+
 .submenu-list li {
     border-bottom: 1px solid var(--border-color);
 }
+
 .submenu-list li:last-child {
     border-bottom: none;
 }
+
 .submenu-list li a {
-    padding: 10px 15px; 
+    display: block;
+    padding: 10px 15px;
+    color: var(--text-color);
+    font-size: 14px;
 }
+
+/* --- Hover desktop --- */
 .has-submenu:hover > .submenu-list {
     display: block;
 }
 
-/* --- HIỆU ỨNG HOVER CHO DANH MỤC & MENU CON --- */
+/* Hiệu ứng hover cho các item */
 .category-list li:hover {
     background-color: var(--primary-color);
-    border-color: var(--primary-color) !important;
 }
 
-.category-list li:hover a {
+.category-list li:hover > a {
     color: #000;
     font-weight: bold;
 }
 
 .submenu-list li:hover {
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
 
-.submenu-list li:hover a {
+.submenu-list li:hover > a {
     color: var(--secondary-color);
+    font-weight: bold;
 }
+
 
 
 /* Banner chính */
@@ -223,6 +244,7 @@ ul {
     background-image: url(../Images/iPhone-17.jpg); 
     background-size: cover;
     background-position: center;
+    border-radius: 20px;
     height: 400px;
     padding: 50px 50px;
     display: flex;
@@ -248,8 +270,8 @@ ul {
     transition: background-color 0.2s ease-in-out;
 }
 .shop-btn:hover {
-    border: 2px solid #3ad0de;
-    background: #f6fe05;
+    box-shadow: 0 0 10px 5px rgba(237, 235, 235, 0.988);
+    background:rgb(200, 48, 164) ;
 }
 
 
