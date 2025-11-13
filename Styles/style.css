@@ -36,8 +36,12 @@ ul {
 
 /* --- PHẦN HEADER (TOP BAR) --- */
 .header {
-    background-color: var(--primary-color); 
+    background-color: rgb(212, 223, 234); 
+    border-bottom:2px solid black;
+    border-radius: 10px;
     padding: 10px 0;
+    width: 100%;
+    height: 70px;
 }
 
 .header-main {
@@ -113,8 +117,8 @@ ul {
 }
 .action-item:hover {
     font-weight: 600;
-    border: 2px solid #94dc19;
-    background-color: #f4e80c; 
+    border-bottom: 2px solid #b4a6d6;
+    background-color: #b9e0f3; 
 }
 
 
@@ -133,7 +137,7 @@ ul {
 }
 
 .categories-header {
-    background: var(--secondary-color); /* Xanh lá */
+    background-color: rgb(212, 223, 234); /* Xanh lá */
     color: white;
     padding: 15px 20px;
     font-weight: bold;
